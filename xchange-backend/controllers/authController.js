@@ -2,14 +2,13 @@ const User = require("../models/User");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
-// Register
+// REGISTER (WRITE)
 exports.register = async (req, res) => {
   try {
     const { name, email, password } = req.body;
     if (!name || !email || !password)
       return res.status(400).json({ error: "All fields required" });
 
-    // Check if user exists
     if (await User.findOne({ email })) {
       return res.status(409).json({ error: "Email already registered" });
     }
@@ -19,18 +18,18 @@ exports.register = async (req, res) => {
       name,
       email,
       password: hashedPassword,
-    });
+    }); // <-- WRITE to DB
     res.status(201).json({ message: "User registered", user });
   } catch (err) {
     res.status(500).json({ error: "Registration failed" });
   }
 };
 
-// Login
+// LOGIN (READ)
 exports.login = async (req, res) => {
   try {
     const { email, password } = req.body;
-    const user = await User.findOne({ email });
+    const user = await User.findOne({ email }); // <-- READ from DB
     if (!user)
       return res.status(404).json({ error: "Invalid email or password" });
 
