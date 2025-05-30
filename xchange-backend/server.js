@@ -7,6 +7,8 @@ const listingRoutes = require('./routes/listings');
 const wishlistRoutes = require('./routes/wishlist');
 const reviewRoutes = require('./routes/reviews');
 const userRoutes = require('./routes/user');
+const authRoutes = require('./routes/auth');
+
 
 const app = express();
 app.use(cors());
@@ -16,6 +18,8 @@ app.use('/api/listings', listingRoutes);
 app.use('/api/wishlist', wishlistRoutes);
 app.use('/api/reviews', reviewRoutes);
 app.use('/api/users', userRoutes);
+app.use('/api/auth', authRoutes);
+
 
 mongoose.connect(process.env.MONGO_URI)
   .then(() => {
