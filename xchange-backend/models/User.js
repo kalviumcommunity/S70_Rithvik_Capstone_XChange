@@ -1,7 +1,11 @@
 const mongoose = require('mongoose');
-const userSchema = new mongoose.Schema({
-  name: String,
-  email: String,
-  password: String
+
+const UserSchema = new mongoose.Schema({
+  name: { type: String },
+  email: { type: String, unique: true },
+  password: { type: String },
+  // Add any other fields you want (avatar, etc)
+  wishlist: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Listing' }]
 });
-module.exports = mongoose.model('User', userSchema);
+
+module.exports = mongoose.model('User', UserSchema);
