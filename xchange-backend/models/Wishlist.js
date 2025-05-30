@@ -1,8 +1,8 @@
-const mongoose = require('mongoose');
+const express = require('express');
+const router = express.Router();
+const { getWishlist, addToWishlist } = require('../controllers/wishlistController');
 
-const wishlistSchema = new mongoose.Schema({
-  user: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
-  listings: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Listing' }]
-});
+router.get('/:userId', getWishlist);   // GET wishlist for a user
+router.post('/add', addToWishlist);    // POST add to wishlist
 
-module.exports = mongoose.model('Wishlist', wishlistSchema);
+module.exports = router;
