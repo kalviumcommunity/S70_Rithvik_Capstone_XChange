@@ -33,3 +33,19 @@ exports.createListing = async (req, res) => {
     res.status(500).json({ error: 'Failed to create listing' });
   }
 };
+
+// Update Listing
+exports.updateListing = async (req, res) => {
+  try {
+    // Assuming you use authentication: req.user._id is the logged in user
+    const listing = await Listing.findOneAndUpdate(
+      { _id: req.params.id, owner: req.user ? req.user._id : undefined },
+      req.body,
+      { new: true }
+    );
+    if (!listing) return res.status(404).json({ error: 'Listing not found or not yours' });
+    res.json(listing);
+  } catch (err) {
+    res.status(500).json({ error: 'Failed to update listing' });
+  }
+};
