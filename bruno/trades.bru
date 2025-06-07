@@ -1,0 +1,15 @@
+meta {
+  name: trades
+  type: http
+  seq: 8
+}
+
+get {
+  url: http://localhost:5000/api/trades
+  body: none
+  auth: inherit
+}
+
+headers {
+  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4MzkxYzMxOTExNmNiMGY5NDk5MWFlMiIsImlhdCI6MTc0ODU3MzY5MiwiZXhwIjoxNzUxMTY1NjkyfQ.Lx-YaK61-YcvWcrD3AjcIJs7p0mCZT3mni5igE5GXr8
+}

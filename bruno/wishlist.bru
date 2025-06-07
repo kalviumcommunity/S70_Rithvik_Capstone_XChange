@@ -1,0 +1,22 @@
+meta {
+  name: wishlist
+  type: http
+  seq: 5
+}
+
+post {
+  url: http://localhost:5000/api/wishlist/add
+  body: json
+  auth: inherit
+}
+
+headers {
+  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4Mzk5YTc0ZTg4NGM2OWU4YTlkYzBhMSIsImlhdCI6MTc0ODYwNjY4MywiZXhwIjoxNzUxMTk4NjgzfQ.saFMWschWp8KEqoWqW7cztLLG3aE9-jl6TVyiRCo67w
+}
+
+body:json {
+  {
+    "listingId": "66391f589116cb0f94991af1"
+  }
+  
+}
