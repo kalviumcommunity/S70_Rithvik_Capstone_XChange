@@ -1,0 +1,27 @@
+meta {
+  name: listings
+  type: http
+  seq: 10
+}
+
+put {
+  url: http://localhost:5000/api/trades/::tradeid
+  body: json
+  auth: inherit
+}
+
+params:path {
+  :tradeid: 
+}
+
+headers {
+  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4Mzk5YTc0ZTg4NGM2OWU4YTlkYzBhMSIsImlhdCI6MTc0ODYwNjY4MywiZXhwIjoxNzUxMTk4NjgzfQ.saFMWschWp8KEqoWqW7cztLLG3aE9-jl6TVyiRCo67w
+}
+
+body:json {
+  {
+    "status": "accepted"
+  }
+  
+  
+}

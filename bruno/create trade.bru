@@ -1,0 +1,26 @@
+meta {
+  name: create trade
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://localhost:5000/api/trades
+  body: json
+  auth: inherit
+}
+
+headers {
+  Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4Mzk5YTc0ZTg4NGM2OWU4YTlkYzBhMSIsImlhdCI6MTc0ODYwNjY4MywiZXhwIjoxNzUxMTk4NjgzfQ.saFMWschWp8KEqoWqW7cztLLG3aE9-jl6TVyiRCo67w
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "requestedListing": "68392019116cb0f94991afc",
+    "offeredListing": "68392549116cb0f94991b2a", 
+    "offeredTo": "68391c319116cb0f94991ae2",
+    "message": "Let's trade!"
+  }
+  
+}
